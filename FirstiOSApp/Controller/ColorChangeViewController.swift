@@ -11,8 +11,17 @@ import UIKit
 public class ColorChangeViewController: UIViewController
 {   //match class name and file name
     //command b to test build
-    //command r to launch
+    //command r to run/launch
 
+    //--------------Data member------------------
+    //buttons can only have 1 referencing outlet
+    private lazy var myColor : ColorTool = ColorTool()
+    @IBOutlet weak var firstButton: UIButton! //_____:____ means is of type
+                                                // ! means optional
+    //lazy -> make me when you need me, otherwise does nothing
+    //marking it as a GUI variable (IBOUTLET)
+    //weak means throw things away if not using on screen
+    
     public override func viewDidLoad() -> Void //return type of method is void
     {
         super.viewDidLoad()
@@ -25,6 +34,10 @@ public class ColorChangeViewController: UIViewController
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func colorClick(_ sender: UIButton) -> Void
+    { //GUI based action (@IBAction)
+        self.view.backgroundColor = myColor.createRandomColor()
+    }
+    
 }
 
