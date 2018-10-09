@@ -8,14 +8,19 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+public class ColorChangeViewController: UIViewController
+{   //match class name and file name
+    //command b to test build
+    //command r to launch
 
-    override func viewDidLoad() {
+    public override func viewDidLoad() -> Void //return type of method is void
+    {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
+    public override func didReceiveMemoryWarning() -> Void
+    {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
