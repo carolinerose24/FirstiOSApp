@@ -18,7 +18,7 @@ public class ColorChangeViewController: UIViewController
     private lazy var myColor : ColorTool = ColorTool()
     @IBOutlet weak var firstButton: UIButton! //_____:____ means is of type
                                                 // ! means optional
-    //lazy -> make me when you need me, otherwise does nothing
+    //lazy -> make me when you need me, otherwise does nothing-only does it when supposed to
     //marking it as a GUI variable (IBOUTLET)
     //weak means throw things away if not using on screen
     
@@ -34,7 +34,7 @@ public class ColorChangeViewController: UIViewController
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func colorClick(_ sender: UIButton) -> Void
+    @IBAction func colorClick(_ sender: UIButton) -> Void //IBAction links button to the method
     { //GUI based action (@IBAction)
         self.view.backgroundColor = myColor.createRandomColor()
         firstButton.backgroundColor = myColor.createRandomColor()
